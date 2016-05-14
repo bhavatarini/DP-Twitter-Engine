@@ -2,12 +2,14 @@ package twitter;
 import java.util.*;
 
 public class User implements tweet,emotion{
+	protected Subject sub;
 
     String handler;
     String follower;
     String emotion;
     String tweet;
     public List<String> tweets=new ArrayList<String>();
+    public List<String> emotions=new ArrayList<String>();
     
     public void name(String h)
     {
@@ -17,8 +19,10 @@ public class User implements tweet,emotion{
    {
        follower = a;  
    }
-   public void emo(String e){
+   public String emo(String e){
 	   emotion=e;
+	   emotions.add(e);
+	   return e;
    }
    public String tweeting(String t){
 	   tweet=t;
@@ -27,13 +31,17 @@ public class User implements tweet,emotion{
    }
    public void notification(){
 	   System.out.println(handler +" just tweeted "+"'"+tweet+"#"+emotion+"' "+ follower);
-   }
-   /*
-  public void disp(){
-	  System.out.println("handler "+handler);
-	  System.out.println("follower "+follower);
-	  System.out.println("emotion "+emotion);
 	  
-  }*/
+   }
+   public void dispTweets(){
+	   System.out.println(handler+"'s"+" tweets:");
+	   
+	   for (int i = 0 ; i < tweets.size(); i++) {
+		   //System.out.println("in for");
+		   //System.out.println(tweets.get(i)+","+emotions.get(i));
+		   System.out.println(tweets.get(i));
+	   }
+   }
+  
 }
 
