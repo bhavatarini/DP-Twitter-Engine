@@ -17,12 +17,12 @@ public class CreateUser {
 		for(int e=0;e<reaction.length;e++){
 			if(reaction[e]>max)
 			{max=reaction[e];i=e;}
-			//System.out.println("Reaction "+reaction[e]);
+			
 		}
 		if(i==0){System.out.println("The highest emotion reacted to is #happy and the tweet count:"+max);}
 		if(i==1){System.out.println("The highest emotion reacted to is #excited and the tweet count:"+max);}
 		if(i==2){System.out.println("The highest emotion reacted to is #good and the tweet count:"+max);}
-		//System.out.println("Maximum:"+max);
+		
 	}
 	  
 	public static void main(String[] args) {
@@ -80,10 +80,10 @@ public class CreateUser {
 			
 					Adi.tweeting(response);
 					Adi.emo(responseEmo);
-			//System.out.println(responseEmo+","+response);
+			
 						
 					if(responseEmo.equals("happy")){
-				   //System.out.println("in happy");
+				   
 						reaction[0]++;
 					}
 					else if(responseEmo.equals("excited")){
@@ -95,7 +95,7 @@ public class CreateUser {
 					Adi.notification();
 					break;
 				case 2:
-			//dispReaction();
+			
 			
 					Adi.dispTweets();
 					break;
@@ -117,7 +117,7 @@ public class CreateUser {
 				Yashu.emo(responseEmo);
 							
 				if(responseEmo.equals("happy")){
-			   //System.out.println("in happy");
+			   
 					reaction[0]++;
 				}
 				else if(responseEmo.equals("excited")){
@@ -129,7 +129,7 @@ public class CreateUser {
 				Yashu.notification();
 		break;
 		case 2:
-		//dispReaction();
+		
 		
 			Yashu.dispTweets();
 		break;
@@ -147,10 +147,10 @@ public class CreateUser {
 		
 				Anu.tweeting(response);
 				Anu.emo(responseEmo);
-		//System.out.println(responseEmo+","+response);
+		
 					
 				if(responseEmo.equals("happy")){
-			   //System.out.println("in happy");
+			   
 					reaction[0]++;
 				}
 				else if(responseEmo.equals("excited")){
@@ -162,7 +162,7 @@ public class CreateUser {
 		Anu.notification();
 		break;
 		case 2:
-		//dispReaction();
+		
 		
 		Anu.dispTweets();
 		break;
@@ -182,10 +182,10 @@ public class CreateUser {
 		
 				gujju.tweeting(response);
 				gujju.emo(responseEmo);
-		//System.out.println(responseEmo+","+response);
+		
 					
 				if(responseEmo.equals("happy")){
-			   //System.out.println("in happy");
+			   
 					reaction[0]++;
 				}
 				else if(responseEmo.equals("excited")){
@@ -198,8 +198,7 @@ public class CreateUser {
 		break;
 		
 		case 2:
-		//dispReaction();
-		
+				
 		gujju.dispTweets();
 		break;
 		default:System.out.println("invalid input!");

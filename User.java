@@ -37,9 +37,7 @@ public class User implements tweet,emotion{
 	   System.out.println(handler+"'s"+" tweets:");
 	   
 	   for (int i = 0 ; i < tweets.size(); i++) {
-		   //System.out.println("in for");
-		   //System.out.println(tweets.get(i)+","+emotions.get(i));
-		   System.out.println(tweets.get(i));
+		     System.out.println(tweets.get(i));
 	   }
    }
   
